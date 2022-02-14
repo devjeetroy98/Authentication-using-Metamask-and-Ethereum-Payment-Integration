@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="container-fluid">
+      <div class="register">
+        <form [formGroup]="profileForm">
+          <label for="first-name" style="color: gray;">Register</label>
+          <input id="first-name" type="text" formControlName="name" placeholder="Your first name">    
+          <input type="submit" (click)="register()" class="registerx">
+        </form>
+      </div>
+      <br/>
+      <h1>OR</h1>
+      <br/>
+      <h1>Login with Metamask</h1>
+      <button class="login"><img src="assets/metamask-elongated.PNG" (click)="handleLogin()"></button>
+      <!-- <button (click)="handleDecrypt()">Decrypt to get Account</button> -->
+      <h1 style="font-size: 12px;" *ngIf="acc && jwt">Account: {{ acc }}</h1> 
+      <h1 class="token-space" *ngIf="acc && jwt">JWT Token: {{ jwt }}</h1>
+    </div>
+  </div>
